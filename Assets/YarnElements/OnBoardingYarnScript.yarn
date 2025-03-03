@@ -227,7 +227,7 @@ tags:
 What brings you in today? #line:Interpreter2
 <<stop_talking_interpreter_animation YarnCommands>> //stops the instructors talking animation for the interpreter
 <<play_inner_monologue3B YarnCommands>> //plays the inner monologue for the player
-<<play_inner_monologue4B YarnCommands>> //plays the inner monologue for the player
+<<player_response_1b YarnCommands>> //plays the player response
     <<jump SimulationSignLanguageTranslatorOffice2>> //jumps to the next scene
 ===
 
@@ -239,7 +239,7 @@ tags:
 <<talking_interpreter_animation YarnCommands>> //start the instructors talking animation for the interpreter
 How long have you had it? #line:Interpreter3
 <<stop_talking_interpreter_animation YarnCommands>> //stops the instructors talking animation for the interpreter
-<<play_inner_monologue5B YarnCommands>> //plays the inner monologue for the player
+<<player_response_2b YarnCommands>> //plays the player response
     <<jump SimulationSignLanguageTranslatorOffice3>> //jumps to the next scene
 === 
 
@@ -252,7 +252,7 @@ tags:
 <<talking_interpreter_animation YarnCommands>> //start the instructors talking animation for the interpreter
 Have you noticed any swelling or redness? #line:Interpreter4
 <<stop_talking_interpreter_animation YarnCommands>> //stops the instructors talking animation for the interpreter
-<<play_inner_monologue6B YarnCommands>> //plays the inner monologue for the player
+<<player_response_3b  YarnCommands>> //plays the player response
     <<jump SimulationSignLanguageTranslatorOffice4>> //jumps to the next scene
 ===
 
@@ -265,7 +265,7 @@ tags:
 <<talking_interpreter_animation YarnCommands>> //start the instructors talking animation for the interpreter
 Have you had any fever or chills? #line:Interpreter5
 <<stop_talking_interpreter_animation YarnCommands>> //stops the instructors talking animation for the interpreter
-<<play_inner_monologue7B YarnCommands>> //plays the inner monologue for the player
+<<player_response_4b YarnCommands>> //plays the player response
     <<jump SimulationSignLanguageTranslatorOffice5>> //jumps to the next scene
 ===
 
@@ -278,7 +278,7 @@ tags:
 <<talking_interpreter_animation YarnCommands>> //start the instructors talking animation for the interpreter
 Have you been feeling more tired than usual? #line:Interpreter6
 <<stop_talking_interpreter_animation YarnCommands>> //stops the instructors talking animation for the interpreter
-<<play_inner_monologue8B YarnCommands>> //plays the inner monologue for the player
+<<player_response_5b YarnCommands>> //plays the player response
     <<jump SimulationSignLanguageTranslatorOffice6>> //jumps to the next scene
 ===
 
@@ -291,7 +291,7 @@ tags:
 <<talking_interpreter_animation YarnCommands>> //start the instructors talking animation for the interpreter
 Are you drinking more water than usual? #line:Interpreter7
 <<stop_talking_interpreter_animation YarnCommands>> //stops the instructors talking animation for the interpreter
-<<play_inner_monologueB YarnCommands>> //plays the inner monologue for the player
+<<player_response_6b YarnCommands>> //plays the player response
     <<jump SimulationSignLanguageTranslatorOffice7>> //jumps to the next scene
 ===
 
@@ -304,7 +304,7 @@ tags:
 <<talking_interpreter_animation YarnCommands>> //start the instructors talking animation for the interpreter
 Any numbness or tingling in your hands or feet? #line:Interpreter8
 <<stop_talking_interpreter_animation YarnCommands>> //stops the instructors talking animation for the interpreter
-<<play_inner_monologue8B YarnCommands>> //plays the inner monologue for the player
+<<player_response_7b YarnCommands>> //plays the player response
     <<jump SimulationSignLanguageTranslatorOffice8>> //jumps to the next scene
 ===
 
@@ -317,10 +317,33 @@ tags:
 <<talking_interpreter_animation YarnCommands>> //start the instructors talking animation for the interpreter
 I’d like to run some tests. Your symptoms could be signs of high blood sugar, possibly diabetes. We’ll do a blood test to check your glucose levels #line:Interpreter9
 <<stop_talking_interpreter_animation YarnCommands>> //stops the instructors talking animation for the interpreter
-<<play_inner_monologue9B YarnCommands>> //plays the inner monologue for the player#
+<<play_inner_monologue4B YarnCommands>> //plays the inner monologue for the player#
+<<player_response_8b YarnCommands>> //plays the player response
+<<play_inner_monologue5B YarnCommands>>
 <<activate_survey_scene YarnCommands>> //activates the survey scene
     <<jump Survey>> //jumps to the survey scene
 ===
+
+title: ScenarioAWaitingRoom
+tags:
+---
+<<play_inner_monologue1AWaitingRoom YarnCommands>> //plays the inner monologue for the player
+<<play_nurse_line_zero YarnCommands>> //plays the nurse line
+<<play_nurse_walk_in YarnCommands>> //start the instructors talking animation for the nurse
+<<talking_nurse_animation YarnCommands>> //start the instructors talking animation for the nurse
+<<play_nurse_line_one YarnCommands>> //plays the nurse line
+<<stop_talking_nurse_animation YarnCommands>> //stops the instructors talking animation for the nurse
+<<play_inner_monologue2AWaitingRoom YarnCommands>> //plays the inner monologue for the player
+<<play_inner_monologue3AWaitingRoom YarnCommands>> //plays the inner monologue for the player
+<<talking_nurse_animation YarnCommands>> //start the instructors talking animation for the nurse
+<<play_nurse_line_two YarnCommands>> //plays the nurse line
+<<stop_talking_nurse_animation YarnCommands>> //stops the instructors talking animation for the nurse
+<<play_inner_monologue4AWaitingRoom YarnCommands>> //plays the inner monologue for the player
+<<play_inner_monologue5AWaitingRoom YarnCommands>> //plays the inner monologue for the player
+<<teleport_to_office YarnCommands>> //teleports the player to the office
+    <<jump DoctorQ1>> //jumps to the next scene
+===
+
 
 title: DoctorQ1
 tags:
@@ -429,7 +452,7 @@ Good- *inaudible* tests-...monitor *inaudible* #line:Doctor10 //Doctor tells the
 <<stop_talking_doctor_animation YarnCommands>> //stops the doctors talking animation
 <<play_inner_monologue10A YarnCommands>> //plays the inner monologue for the player
 <<play_inner_monologue11A YarnCommands>> //plays the inner monologue for the player
-<<player_response_10a YarnCommands>> //plays the player response
+<<player_response_9a YarnCommands>> //plays the player response
     <<jump DoctorL3>> //jumps to the next scene
 ===
 
@@ -439,9 +462,9 @@ tags:
 <<talking_doctor_animation YarnCommands>> //start the doctors talking animation
 *inaudible* #line:Doctor11 //Doctor tells the player they will run some tests
 <<stop_talking_doctor_animation YarnCommands>> //stops the doctors talking animation
-<<play_inner_monologue12A YarnCommands>> //plays the inner monologue for the player
+<<play_inner_monologue9A YarnCommands>> //plays the inner monologue for the player
 <<activate_simulationB YarnCommands>> //activates the second simulation
-
+===
 title:Survey
 tags:
 ---

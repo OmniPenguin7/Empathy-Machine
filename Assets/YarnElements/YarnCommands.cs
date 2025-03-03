@@ -12,7 +12,7 @@ public class YarnCommands : MonoBehaviour
 
     public GameObject stageOneTargetObject, stageTwoTargetObject, stageThreeTargetObject;
 
-    public Animator talkingInstructorAni,talkingInstructor2Ani, idleDoctorAni, talkingInterpreterAni, walkingNurseAni;
+    public Animator talkingInstructorAni, talkingInstructor2Ani, idleDoctorAni, talkingInterpreterAni, walkingNurseAni, talkingNurseAni;
 
     public GameObject briefingRoomTarget, officeRoomTarget, waitingRoomTarget;
 
@@ -46,8 +46,6 @@ public class YarnCommands : MonoBehaviour
     public AudioSource innerMonologue10A;
     public AudioSource innerMonologue11A;
     public AudioSource innerMonologue12A;
-
-    [Header("Inner Monologue B Waiting Room")]
 
     [Header("Inner Monologue B")]
     public AudioSource innerMonologue1B;
@@ -170,7 +168,7 @@ public class YarnCommands : MonoBehaviour
     [YarnCommand("activate_simulationA")]
     public void LoadScenarioScene()
     {
-        cameraFader.FadeToScene(2f, "ScenariosV3");
+        cameraFader.FadeToScene(2f, "ScenariosFINALVERSION");
     }
 
     [YarnCommand("activate_simulationB")]
@@ -185,13 +183,13 @@ public class YarnCommands : MonoBehaviour
 
     public void LoadSurveyScene()
     {
-        SceneManager.LoadScene("StartEndV7");
+        cameraFader.FadeToScene(2f, "Survey");
     }
 
     [YarnCommand("restart_onboarding")]
     public void RestartOnboarding()
     {
-        SceneManager.LoadScene("Onboarding");
+        SceneManager.LoadScene("StartEndFINALVERSION");
     }
 
     [YarnCommand("exit_application")]
@@ -277,18 +275,51 @@ public class YarnCommands : MonoBehaviour
         walkingNurseAni.SetInteger("isNurseWalkingIn", 1);
     }
 
-    [YarnCommand("nurse_reached_trigger")]
+    [YarnCommand("talking_nurse_animation")]
 
-    public void NurseReachedTrigger()
+    public void TalkingNurseAnimation()
     {
-        walkingNurseAni.SetInteger("hasNurseReachedTrigger", 1);
+        talkingNurseAni.SetInteger("isNurseTalking", 1);
     }
 
-    //Teleports
+    [YarnCommand("stop_talking_nurse_animation")]
 
-    //Briefing Room
+    public void StopTalkingNurseAnimation()
+    {
+        talkingNurseAni.SetInteger("isNurseTalking", 0);
+    }
 
-    [YarnCommand("teleport_to_briefing_room")]
+    //[YarnCommand("nurse_reached_trigger")]
+
+    //public void NurseReachedTrigger()
+    //{
+    //    walkingNurseAni.SetInteger("hasNurseReachedTrigger", 1);
+    //}
+
+    [YarnCommand("play_nurse_line_zero")]
+
+    public void PlayNurseLineZero()
+    {
+        nurseLineZero.Play();
+    }
+
+    [YarnCommand("play_nurse_line_one")]
+
+    public void PlayNurseLineOne()
+    {
+        nurseLineOne.Play();
+    }
+
+    [YarnCommand("play_nurse_line_two")]
+    public void PlayNurseLineTwo()
+    {
+      nurseLineTwo.Play();
+    }
+//Teleports
+
+//Briefing Room
+
+[YarnCommand("teleport_to_briefing_room")]
 
     public void TeleportToBriefingRoom()
     {
@@ -331,6 +362,8 @@ public class YarnCommands : MonoBehaviour
 
     }
 
+   
+
 
     //InnerMonologue
 
@@ -369,6 +402,42 @@ public class YarnCommands : MonoBehaviour
         innerMonologue5B.Play();
     }
 
+    //InnerMonologueAWaitingRoom
+
+    [YarnCommand("play_inner_monologue1AWaitingRoom")]
+    public void play_inner_monologue1AWaitingRoom()
+    {
+        innerMonologue1AWaitingRoom.Play();
+    }
+
+    [YarnCommand("play_inner_monologue2AWaitingRoom")]
+    public void play_inner_monologue2AWaitingRoom()
+    {
+        innerMonologue2AWaitingRoom.Play();
+    }
+
+    [YarnCommand("play_inner_monologue3AWaitingRoom")]
+    public void play_inner_monologue3AWaitingRoom()
+    {
+        innerMonologue3AWaitingRoom.Play();
+    }
+
+    [YarnCommand("play_inner_monologue4AWaitingRoom")]
+    public void play_inner_monologue4AWaitingRoom()
+    {
+        innerMonologue4AWaitingRoom.Play();
+    }
+
+    [YarnCommand("play_inner_monologue5AWaitingRoom")]
+    public void play_inner_monologue5AWaitingRoom()
+    {
+        innerMonologue5AWaitingRoom.Play();
+    }
+
+
+
+
+    //InnerMonologue A Doctors Office
     [YarnCommand("play_inner_monologue1A")]
 
     public void play_inner_monologue1A()
