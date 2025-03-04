@@ -26,6 +26,7 @@ public class YarnCommands : MonoBehaviour
 
     public CameraFader cameraFader;
 
+
     [Header ("Inner Monologue A Waiting Room")]
     public AudioSource innerMonologue1AWaitingRoom;
     public AudioSource innerMonologue2AWaitingRoom;
@@ -118,39 +119,47 @@ public class YarnCommands : MonoBehaviour
     public AudioSource footsteps;
     public AudioSource phoneRing;
 
-    //public GameObject door;
+    public GameObject door;
 
     public void Start()
     {
         dialogueRunner = FindObjectOfType<DialogueRunner>();
     }
 
-    //Onboarding//
+    public void LoadYarnNode(string nodeName)
+    {
+        dialogueRunner.StartDialogue(nodeName);
+    }
 
-    //[YarnCommand("door_open")]
+    //Onboarding
 
-    //public void DoorOpen()
-    //{
-    //    door.transform.Rotate(0, 90, 0);
-    //    doorOpen.Play();
-    //}
+    [YarnCommand("door_open")]
+
+    public void DoorOpen()
+    {
+        door.transform.Rotate(0, 90, 0);
+        doorOpen.Play();
+    }
 
     [YarnCommand("activate_onboarding_stage_one")]
     public void ActivateOnboardingStageOne()
     {
         stageOneTargetObject.SetActive(true);
+        Debug.Log("Onboarding stage one has been activated");
     }
 
     [YarnCommand("activate_onboarding_stage_two")]
     public void ActivateOnboardingStageTwo()
     {
         stageTwoTargetObject.SetActive(true);
+        Debug.Log("Onboarding stage two has been activated");
     }
 
     [YarnCommand("activate_onboarding_stage_three")]
     public void ActivateOnboardingStageThree()
     {
         stageThreeTargetObject.SetActive(true);
+        Debug.Log("Onboarding stage three has been activated");
     }
 
     [YarnCommand("deactivate_onboarding_stage_one")]
@@ -169,6 +178,7 @@ public class YarnCommands : MonoBehaviour
     public void LoadScenarioScene()
     {
         cameraFader.FadeToScene(2f, "ScenariosFINALVERSION");
+        Debug.Log("Scene " + "ScenariosFINALVERSION" + " is loading...");
     }
 
     [YarnCommand("activate_simulationB")]
@@ -336,6 +346,14 @@ public class YarnCommands : MonoBehaviour
     }
 
     //Spawning
+
+    [YarnCommand("spawn_red_circle")]
+
+    public void SpawnRedCircle()
+    {
+
+        Debug.Log("Red circle has been spawned");
+    }
 
     [YarnCommand("spawn_survey")]
 

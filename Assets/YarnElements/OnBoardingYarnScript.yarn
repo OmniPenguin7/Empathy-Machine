@@ -49,49 +49,56 @@ To begin, please walk over to the red circle on the floor across you. #line:Inst
 To do this move the left joystick forwards and use the right joystick to turn! #line:InstructorLine6 //gets the player used to the controls
 <<activate_onboarding_stage_one YarnCommands>> //starts the first stage of the onboarding tutorial
 <<stop_talking_instructor_animation YarnCommands>>
-<<if $onboarding_one_trigger_active is true>> //checks if the trigger for the first stage of the onboarding tutorial is active
-    <<set $completedOnboardingStageOne = true>> //sets the first stage of the onboarding tutorial to true
-<<endif>>
 
-<<if $completedOnboardingStageOne is true>> //checks if the first stage of the onboarding tutorial has been completed   
+//<<if $onboarding_one_trigger_active is true>> //checks if the trigger for the first stage of the onboarding tutorial is active
+  //  <<set $completedOnboardingStageOne = true>> //sets the first stage of the onboarding tutorial to true
+//<<endif>>
 
-Would you like to go to the next stage? #line:InstructorLine7 //asks the player if they would like to go to the next stage
-Select yes to continue or no to repeat this stage. #line:InstructorLine8 //instructs the player on how to proceed
-->Yes
-    <<jump OnboardingStage2>>
-->No
-    <<jump OnboardingStage1>>
-<<endif>>
+//<<if $completedOnboardingStageOne is true>> //checks if the first stage of the onboarding tutorial has been completed   
+
+
+//<<endif>>
 ===
 
 title: OnboardingStage2
 tags:
 ---
-<<deactivate_onboarding_stage_one YarnCommands>> //deactivates the first stage of the onboarding tutorial
 <<talking_instructor_animation YarnCommands>> //start the instructors talking animation for onboarding stage 2
+
+Would you like to go to the next stage? #line:InstructorLine7 //asks the player if they would like to go to the next stage
+Select yes to continue or no to repeat this stage. #line:InstructorLine8 //instructs the player on how to proceed
+->Yes
+->No
+    <<jump OnboardingStage1>>
+
 Great job! Now, let’s learn how to interact with objects! #line:InstructorLine9 //instructs the player on how to interact with objects
-A table has appeared in the middle of the room. #line:InstructorLine10 
-Walk towards it and press the grab button on the right controller as indicated by the diagram! #line:InstructorLine11
 <<activate_onboarding_stage_two YarnCommands>> //starts the second stage of the onboarding tutorial
-<<stop_talking_instructor_animation YarnCommands>> //stops the instructors talking animation
-<<set $completedOnboardingStageTwo = true>> //sets the second stage of the onboarding tutorial to true
-
-<<if $completedOnboardingStageTwo is true>> //checks if the second stage of the onboarding tutorial has been completed
-
-Would you like to go to the next stage? #line:InstructorLine7B //asks the player if they would like to go to the next stage
-Select yes to continue or no to repeat this stage. #InstructorLine8B //instructs the player on how to proceed
-
--> Yes
-    <<jump OnboardingStage3>>
--> No
-    <<jump OnboardingStage2>>
-<<endif>>
+<<jump OnboardingStage3>> //jumps to the next stage of the onboarding tutorial
+//<<endif>>
 ===
 
 title: OnboardingStage3
 tags:
 ---
-<<deactivate_onboarding_stage_two YarnCommands>> //deactivates the second stage of the onboarding tutorial
+A table has appeared in the middle of the room. #line:InstructorLine10 
+Walk towards it and press the grab button on the right controller as indicated by the diagram! #line:InstructorLine11
+//<<set $completedOnboardingStageTwo = true>> //sets the second stage of the onboarding tutorial to true
+
+//<<if $completedOnboardingStageTwo is true>> //checks if the second stage of the onboarding tutorial has been completed
+
+Would you like to go to the next stage? #line:InstructorLine7B //asks the player if they would like to go to the next stage
+Select yes to continue or no to repeat this stage. #InstructorLine8B //instructs the player on how to proceed
+<<stop_talking_instructor_animation YarnCommands>> //stops the instructors talking animation
+
+-> Yes
+    <<jump OnboardingStage4>>
+-> No
+    <<jump OnboardingStage3>>
+
+===
+title: OnboardingStage4
+tags:
+---
 <<talking_instructor_animation YarnCommands>> //start the instructors talking animation for onboarding stage 3  
 Now you are talking! #line:InstructorLine12
 Finally, the last thing you will need to learn is how to interact with dialogue. #line:InstructorLine13
@@ -174,9 +181,9 @@ Now for the patient story and symptoms, with accurate diagnosis to keep in mind 
 
 Sound simple?  #line:Briefing3
 <<stop_talking_instructor_animation YarnCommands>> //stops the instructors talking animation
-Yes
+->Yes
     <<jump Briefing2>>
-No
+->No
     <<jump Briefing1>>
 
 ===
@@ -199,6 +206,7 @@ Now, you will enter the simulation. #line:Briefing14
 Are you ready to enter the simulation?
 ->Yes
     <<activate_simulationA YarnCommands>>
+    <<jump ScenarioAWaitingRoom>>
 ->No
     <<jump Briefing2>>
 
@@ -327,6 +335,8 @@ I’d like to run some tests. Your symptoms could be signs of high blood sugar, 
 title: ScenarioAWaitingRoom
 tags:
 ---
+
+
 <<play_inner_monologue1AWaitingRoom YarnCommands>> //plays the inner monologue for the player
 <<play_nurse_line_zero YarnCommands>> //plays the nurse line
 <<play_nurse_walk_in YarnCommands>> //start the instructors talking animation for the nurse

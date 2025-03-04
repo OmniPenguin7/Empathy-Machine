@@ -6,7 +6,7 @@ public class OnboardingStageTrigger : MonoBehaviour
 {
     public YarnCommands yarnCommnands;
 
-    public string onboardingObjective;
+    public string nextNodeToLoad;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class OnboardingStageTrigger : MonoBehaviour
         if(other.tag == "Player")
         {
             Debug.Log("Onboarding Stage Triggered");
-            yarnCommnands.StartNextOnboardingStage(onboardingObjective);
+            yarnCommnands.StartNextOnboardingStage(nextNodeToLoad);
 
             gameObject.SetActive(false);
         }
