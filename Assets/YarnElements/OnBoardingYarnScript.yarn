@@ -474,6 +474,7 @@ tags:
 <<stop_talking_doctor_animation YarnCommands>> //stops the doctors talking animation
 <<play_inner_monologue9A YarnCommands>> //plays the inner monologue for the player
 <<activate_simulationB YarnCommands>> //activates the second simulation
+    <<jump SimulationSignLanguageTranslatorWaiting>> //jumps to the next scene
 ===
 title:Survey
 tags:
