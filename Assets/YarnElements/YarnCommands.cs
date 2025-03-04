@@ -26,6 +26,8 @@ public class YarnCommands : MonoBehaviour
 
     public CameraFader cameraFader;
 
+    public GameObject instructor;
+
 
     [Header ("Inner Monologue A Waiting Room")]
     public AudioSource innerMonologue1AWaitingRoom;
@@ -380,7 +382,14 @@ public class YarnCommands : MonoBehaviour
 
     }
 
-   
+    [YarnCommand("despawn_instructor")]
+
+    public void DespawnInstructor()
+    {
+        instructor.SetActive(false);
+    }
+
+
 
 
     //InnerMonologue

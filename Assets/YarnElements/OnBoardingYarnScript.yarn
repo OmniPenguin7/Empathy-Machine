@@ -106,7 +106,7 @@ Finally, the last thing you will need to learn is how to interact with dialogue.
 A character is waiting outside for you. #line:InstructorLine15
 Open the door by interacting with the handle, the same way you did with the cube, and go greet them! #line:InstructorLine16
 <<stop_talking_instructor_animation YarnCommands>> //stops the instructors talking animation
-
+<<despawn_instructor YarnCommands>> //despawns the instructor
 <<activate_onboarding_stage_three YarnCommands>> //starts the third stage of the onboarding tutorial
 ===
 
