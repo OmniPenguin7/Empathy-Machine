@@ -3,16 +3,13 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![Website][website]][website-url]
-[![LinkedInCompany][linkedinCompany-shield]][linkedinCompany-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Website][website-shield]][website-url]
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/OmniPenguin7/Empathy-Machine">
-    <img src="https://your-logo-url.com/logo.png" alt="Logo" width="350" height="350">
+    <img src="https://raw.githubusercontent.com/OmniPenguin7/Empathy-Machine/aaf9382338c52cd3826fff4c5853f3d98fda7853/logo.jpg" alt="Logo" width="350" height="350">
   </a>
 
 <h3 align="center">Empathy Machines VR - Deaf Awareness in Healthcare</h3>
@@ -102,25 +99,30 @@ Empathy Machines VR is a standalone VR experience designed to **raise awareness 
 Distributed under the ** **. See `LICENSE` for more information.
 
 ## Contact
-Team Amused - [your_email@domain.com](mailto:your_email@domain.com)
-Lois - 2107802@swansea.ac.uk
-Project Link: [https://github.com/OmniPenguin7/Empathy-Machine](https://github.com/OmniPenguin7/Empathy-Machine)
-
+Lois - 2107802@swansea.ac.uk  
+Seb - [starsky.productions@protonmail.com](mailto:your_email@domain.com)  
+  
+Project Links:  
+[https://github.com/OmniPenguin7/Empathy-Machine](https://github.com/OmniPenguin7/Empathy-Machine)  
+[https://github.com/sebolsita/Empathy-Machine](https://github.com/sebolsita/Empathy-Machine)
 ## Acknowledgments
 - Asset Store Models & Sound Credits
 - Research papers on VR and empathy
 - Any tools or libraries used
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/OmniPenguin7/Empathy-Machine.svg?style=for-the-badge
-[contributors-url]: https://github.com/OmniPenguin7/Empathy-Machine/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/OmniPenguin7/Empathy-Machine.svg?style=for-the-badge
-[forks-url]: https://github.com/OmniPenguin7/Empathy-Machine/network/members
-[stars-shield]: https://img.shields.io/github/stars/OmniPenguin7/Empathy-Machine.svg?style=for-the-badge
-[stars-url]: https://github.com/OmniPenguin7/Empathy-Machine/stargazers
-[issues-shield]: https://img.shields.io/github/issues/OmniPenguin7/Empathy-Machine.svg?style=for-the-badge
-[issues-url]: https://github.com/OmniPenguin7/Empathy-Machine/issues
-[license-shield]: https://img.shields.io/github/license/OmniPenguin7/Empathy-Machine.svg?style=for-the-badge
-[license-url]: https://opensource.org/licenses/MIT
+[contributors-shield]: https://img.shields.io/github/contributors/sebolsita/Empathy-Machine.svg?style=for-the-badge
+[contributors-url]: https://github.com/sebolsita/Empathy-Machine/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/sebolsita/Empathy-Machine.svg?style=for-the-badge
+[forks-url]: https://github.com/sebolsita/Empathy-Machine/network/members
+[stars-shield]: https://img.shields.io/github/stars/sebolsita/Empathy-Machine.svg?style=for-the-badge
+[stars-url]: https://github.com/sebolsita/Empathy-Machine/stargazers
+[issues-shield]: https://img.shields.io/github/issues/sebolsita/Empathy-Machine.svg?style=for-the-badge
+[issues-url]: https://github.com/sebolsita/Empathy-Machine/issues
 
+[website-shield]: https://img.shields.io/badge/Website-Live-blue?style=for-the-badge
+[website-url]: https://star-sky.co.uk/Empathy-Machine/
+
+[license-shield]: https://img.shields.io/github/license/sebolsita/Empathy-Machine.svg?style=for-the-badge
+[license-url]: LICENSE
 
