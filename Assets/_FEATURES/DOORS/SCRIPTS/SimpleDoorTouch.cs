@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 namespace Amused.Interactions
@@ -79,13 +80,18 @@ namespace Amused.Interactions
 
         private void TriggerHapticFeedback(Collider other)
         {
-            XRBaseInteractor interactor = other.GetComponentInParent<XRBaseInteractor>();
+            XRDirectInteractor interactor = other.GetComponentInParent<XRDirectInteractor>();
 
-            if (interactor is XRBaseInputInteractor inputInteractor)
+            if (interactor != null)
             {
-                inputInteractor.SendHapticImpulse(hapticIntensity, hapticDuration);
+                var hapticImpulse = interactor.GetComponent<HapticImpulsePlayer>();
+                if (hapticImpulse != null)
+                {
+                    hapticImpulse.SendHapticImpulse(hapticIntensity, hapticDuration);
+                }
             }
         }
+
         #endregion
 
         #region COROUTINES
