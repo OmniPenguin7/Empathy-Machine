@@ -11,7 +11,7 @@ public class YarnCommands : MonoBehaviour
     public DialogueRunner dialogueRunner;
 
     public GameObject stageOneTargetObject, stageTwoTargetObject, stageThreeTargetObject;
-
+   
     public Animator talkingInstructorAni, talkingInstructor2Ani, idleDoctorAni, talkingInterpreterAni, walkingNurseAni, talkingNurseAni;
 
     public GameObject briefingRoomTarget, officeRoomTarget, waitingRoomTarget;
@@ -336,6 +336,8 @@ public class YarnCommands : MonoBehaviour
     public void TeleportToBriefingRoom()
     {
         player.transform.position = briefingRoomTarget.transform.position;
+        instructor.SetActive(true);
+        Debug.Log("Player has been teleported to the briefing room");
     }
 
     //Office Room
@@ -345,6 +347,7 @@ public class YarnCommands : MonoBehaviour
     public void TeleportToOffice()
     {
         player.transform.position = officeRoomTarget.transform.position;
+        Debug.Log("Player has been teleported to the office");
     }
 
     //Spawning
@@ -399,6 +402,7 @@ public class YarnCommands : MonoBehaviour
     public void play_inner_monologue1B()
     {
         innerMonologue1B.Play();
+        Debug.Log("Inner monologue 1B has been played");
     }
 
     [YarnCommand("play_inner_monologue2B")]
@@ -435,6 +439,7 @@ public class YarnCommands : MonoBehaviour
     public void play_inner_monologue1AWaitingRoom()
     {
         innerMonologue1AWaitingRoom.Play();
+        Debug.Log("Inner monologue 1AWaitingRoom has been played");
     }
 
     [YarnCommand("play_inner_monologue2AWaitingRoom")]
@@ -470,6 +475,7 @@ public class YarnCommands : MonoBehaviour
     public void play_inner_monologue1A()
     {
         innerMonologue1A.Play();
+        Debug.Log("Inner monologue 1A has been played");
     }
 
     [YarnCommand("play_inner_monologue2A")]
@@ -551,6 +557,7 @@ public class YarnCommands : MonoBehaviour
     public void PlayDoctorQuestionOne()
     {
        doctorQuestionOne.Play();
+       Debug.Log("Doctor question one has been played");
     }
 
     [YarnCommand("play_doctor_question_two")]
@@ -609,6 +616,7 @@ public class YarnCommands : MonoBehaviour
     public void PlayerResponse1A()
     {
         playerResponse1A.Play();
+        Debug.Log("Player response 1A has been played");
     }
 
     [YarnCommand("player_response_2a")]
@@ -675,6 +683,7 @@ public class YarnCommands : MonoBehaviour
     public void PlayerResponse1B()
     {
         playerResponse1B.Play();
+        Debug.Log("Player response 1B has been played");
     }
 
     [YarnCommand("player_response_2b")]

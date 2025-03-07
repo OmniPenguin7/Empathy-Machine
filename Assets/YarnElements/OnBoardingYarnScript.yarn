@@ -91,7 +91,7 @@ Select yes to continue or no to repeat this stage. #InstructorLine8B //instructs
 <<stop_talking_instructor_animation YarnCommands>> //stops the instructors talking animation
 
 -> Yes
-    <<jump OnboardingStage4>>
+    <<jump Briefing2>>
 -> No
     <<jump OnboardingStage3>>
 
@@ -167,7 +167,7 @@ Amazing work! #line:InstructorLine24
 
 Now, you will be teleported to learn the diagnosis to keep in mind during the simulation, good luck! #line:InstructorLine25
 <<stop_talking_instructor2_animation target=YarnCommands>> //stops the instructors talking animation
-    <<set $completedOnBoarding = true>>
+    //<<set $completedOnBoarding = true>>
     <<jump Briefing1>>
 ===
 
@@ -176,8 +176,7 @@ tags:
 ---
 <<teleport_to_briefing_room YarnCommands>> //teleports the player to the briefing room
 <<talking_instructor_animation YarnCommands>> //start the instructors talking animation for the briefing
-Hello, congratulations on completing your onboarding. #line:Briefing1
-Now for the patient story and symptoms, with accurate diagnosis to keep in mind when answering questions in the simulator. #line:Briefing2
+
 
 Sound simple?  #line:Briefing3
 <<stop_talking_instructor_animation YarnCommands>> //stops the instructors talking animation
@@ -193,6 +192,8 @@ tags:
 ---
 <<spawn_patient_history YarnCommands>> //spawns the patient history for the player to read
 <<talking_instructor_animation YarnCommands>> //start the instructors talking animation for the briefing
+Hello, congratulations on completing your onboarding. #line:Briefing1
+Now for the patient story and symptoms, with accurate diagnosis to keep in mind when answering questions in the simulator. #line:Briefing2
 The patient you will be roleplaying has these main symptoms; #line:Briefing4
 Wounds that are not healing.  #line:Briefing6
 Numbness in limbs.  #line:Briefing7
@@ -206,7 +207,7 @@ Now, you will enter the simulation. #line:Briefing14
 Are you ready to enter the simulation?
 ->Yes
     <<activate_simulationA YarnCommands>>
-    <<jump ScenarioAWaitingRoom>>
+    //<<jump ScenarioAWaitingRoom>>
 ->No
     <<jump Briefing2>>
 
@@ -218,10 +219,12 @@ tags:
 ---
 <<play_nurse_walk_in YarnCommands>> //plays the nurse walking in
 <<play_inner_monologue1B YarnCommands>>//plays the inner monologue for the player
+<<wait 5>>
 <<talking_interpreter_animation YarnCommands>> //start the instructors talking animation for the interpreter
 They just called your name. #line:Interpreter1
 <<stop_talking_interpreter_animation YarnCommands>> //stops the instructors talking animation for the interpreter
 <<play_inner_monologue2B YarnCommands>> //plays the inner monologue for the player
+<<wait 5>>
 <<teleport_to_office YarnCommands>> //teleports the player to the office
     <<jump SimulationSignLanguageTranslatorOffice1>> //jumps to the next scene
 ===
@@ -230,11 +233,13 @@ tags:
 ---
 <<talking_doctor_animation YarnCommands>> //start the doctors talking animation
 <<play_doctor_question_one YarnCommands>> //plays the first doctor question
+<<wait  5 >> //waits for 5 seconds
 <<stop_talking_doctor_animation target>>
 <<talking_interpreter_animation YarnCommands>> //start the instructors talking animation for the interpreter
 What brings you in today? #line:Interpreter2
 <<stop_talking_interpreter_animation YarnCommands>> //stops the instructors talking animation for the interpreter
 <<play_inner_monologue3B YarnCommands>> //plays the inner monologue for the player
+<<wait  5 >>
 <<player_response_1b YarnCommands>> //plays the player response
     <<jump SimulationSignLanguageTranslatorOffice2>> //jumps to the next scene
 ===
@@ -244,10 +249,12 @@ tags:
 ---
 <<talking_doctor_animation YarnCommands>> //start the doctors talking animation
 <<play_doctor_question_two YarnCommands>> //plays the second doctor question
+<<wait  3>>
 <<talking_interpreter_animation YarnCommands>> //start the instructors talking animation for the interpreter
 How long have you had it? #line:Interpreter3
 <<stop_talking_interpreter_animation YarnCommands>> //stops the instructors talking animation for the interpreter
 <<player_response_2b YarnCommands>> //plays the player response
+<<wait  3>>
     <<jump SimulationSignLanguageTranslatorOffice3>> //jumps to the next scene
 === 
 
@@ -256,11 +263,13 @@ tags:
 ---
 <<talking_doctor_animation YarnCommands>> //start the doctors talking animation
 <<play_doctor_question_three YarnCommands>> //plays the third doctor question
+<<wait  4>>
 <<stop_talking_doctor_animation YarnCommands>> //stops the doctors talking animation
 <<talking_interpreter_animation YarnCommands>> //start the instructors talking animation for the interpreter
 Have you noticed any swelling or redness? #line:Interpreter4
 <<stop_talking_interpreter_animation YarnCommands>> //stops the instructors talking animation for the interpreter
 <<player_response_3b  YarnCommands>> //plays the player response
+<<wait  3>>
     <<jump SimulationSignLanguageTranslatorOffice4>> //jumps to the next scene
 ===
 
@@ -269,11 +278,13 @@ tags:
 ---
 <<talking_doctor_animation YarnCommands>> //start the doctors talking animation
 <<play_doctor_question_four YarnCommands>> //plays the fourth doctor question
+<<wait  4>>
 <<stop_talking_doctor_animation YarnCommands>> //stops the doctors talking animation
 <<talking_interpreter_animation YarnCommands>> //start the instructors talking animation for the interpreter
 Have you had any fever or chills? #line:Interpreter5
 <<stop_talking_interpreter_animation YarnCommands>> //stops the instructors talking animation for the interpreter
 <<player_response_4b YarnCommands>> //plays the player response
+<<wait  3>>
     <<jump SimulationSignLanguageTranslatorOffice5>> //jumps to the next scene
 ===
 
@@ -282,11 +293,13 @@ tags:
 ---
 <<talking_doctor_animation YarnCommands>> //start the doctors talking animation
 <<play_doctor_question_five YarnCommands>> //plays the fifth doctor question
+<<wait  3>>
 <<stop_talking_doctor_animation YarnCommands>> //stops the doctors talking animation
 <<talking_interpreter_animation YarnCommands>> //start the instructors talking animation for the interpreter
 Have you been feeling more tired than usual? #line:Interpreter6
 <<stop_talking_interpreter_animation YarnCommands>> //stops the instructors talking animation for the interpreter
 <<player_response_5b YarnCommands>> //plays the player response
+<<wait  3>>
     <<jump SimulationSignLanguageTranslatorOffice6>> //jumps to the next scene
 ===
 
@@ -295,11 +308,13 @@ tags:
 ---
 <<talking_doctor_animation YarnCommands>> //start the doctors talking animation
 <<play_doctor_question_six YarnCommands>> //plays the sixth doctor question
+<<wait  3>>
 <<stop_talking_doctor_animation YarnCommands>> //stops the doctors talking animation
 <<talking_interpreter_animation YarnCommands>> //start the instructors talking animation for the interpreter
 Are you drinking more water than usual? #line:Interpreter7
 <<stop_talking_interpreter_animation YarnCommands>> //stops the instructors talking animation for the interpreter
 <<player_response_6b YarnCommands>> //plays the player response
+<<wait  2>>
     <<jump SimulationSignLanguageTranslatorOffice7>> //jumps to the next scene
 ===
 
@@ -308,11 +323,13 @@ tags:
 ---
 <<talking_doctor_animation YarnCommands>> //start the doctors talking animation
 <<play_doctor_question_seven YarnCommands>> //plays the seventh doctor question
+<<wait  4>>
 <<stop_talking_doctor_animation YarnCommands>> //stops the doctors talking animation
 <<talking_interpreter_animation YarnCommands>> //start the instructors talking animation for the interpreter
 Any numbness or tingling in your hands or feet? #line:Interpreter8
 <<stop_talking_interpreter_animation YarnCommands>> //stops the instructors talking animation for the interpreter
 <<player_response_7b YarnCommands>> //plays the player response
+<<wait  3>>
     <<jump SimulationSignLanguageTranslatorOffice8>> //jumps to the next scene
 ===
 
@@ -321,13 +338,16 @@ tags:
 ---
 <<talking_doctor_animation YarnCommands>> //start the doctors talking animation
 <<play_doctor_question_eight YarnCommands>> //plays the eighth doctor question
+<<wait  3>>
 <<stop_talking_doctor_animation YarnCommands>> //stops the doctors talking animation
 <<talking_interpreter_animation YarnCommands>> //start the instructors talking animation for the interpreter
 I’d like to run some tests. Your symptoms could be signs of high blood sugar, possibly diabetes. We’ll do a blood test to check your glucose levels #line:Interpreter9
 <<stop_talking_interpreter_animation YarnCommands>> //stops the instructors talking animation for the interpreter
-<<play_inner_monologue4B YarnCommands>> //plays the inner monologue for the player#
+<<play_inner_monologue4B YarnCommands>> //plays the inner monologue for the player
+<<wait  4>>
 <<player_response_8b YarnCommands>> //plays the player response
 <<play_inner_monologue5B YarnCommands>>
+<<wait  4>>
 <<activate_survey_scene YarnCommands>> //activates the survey scene
     <<jump Survey>> //jumps to the survey scene
 ===
@@ -338,19 +358,26 @@ tags:
 
 
 <<play_inner_monologue1AWaitingRoom YarnCommands>> //plays the inner monologue for the player
+<<wait  3>>
 <<play_nurse_line_zero YarnCommands>> //plays the nurse line
 <<play_nurse_walk_in YarnCommands>> //start the instructors talking animation for the nurse
 <<talking_nurse_animation YarnCommands>> //start the instructors talking animation for the nurse
 <<play_nurse_line_one YarnCommands>> //plays the nurse line
+<<wait  5>>
 <<stop_talking_nurse_animation YarnCommands>> //stops the instructors talking animation for the nurse
 <<play_inner_monologue2AWaitingRoom YarnCommands>> //plays the inner monologue for the player
+<<wait  3>>
 <<play_inner_monologue3AWaitingRoom YarnCommands>> //plays the inner monologue for the player
+<<wait  3>>
 <<talking_nurse_animation YarnCommands>> //start the instructors talking animation for the nurse
 <<play_nurse_line_two YarnCommands>> //plays the nurse line
 <<stop_talking_nurse_animation YarnCommands>> //stops the instructors talking animation for the nurse
 <<play_inner_monologue4AWaitingRoom YarnCommands>> //plays the inner monologue for the player
+<<wait  3>>
 <<play_inner_monologue5AWaitingRoom YarnCommands>> //plays the inner monologue for the player
+<<wait  3>>
 <<teleport_to_office YarnCommands>> //teleports the player to the office
+<<wait  4>>
     <<jump DoctorQ1>> //jumps to the next scene
 ===
 
@@ -362,6 +389,7 @@ tags:
 *audio distortion due to hearing aids acclimitising* #line:Doctor1
 <<stop_talking_doctor_animation YarnCommands>> //stops the instructors talking animation for the doctor
 <<play_inner_monologue1A YarnCommands>> //plays the inner monologue for the player
+<<wait  4>>
  <<player_response_1a YarnCommands>> //plays the player response
     <<jump DoctorQ2>> //jumps to the next scene
 ===
@@ -372,6 +400,7 @@ tags:
 H-*inaudible*long- *inaudible* had- *inaudible* #line:Doctor2 //Doctor asks the player how long they have had the symptom
 <<stop_talking_doctor_animation YarnCommands>> //stops the doctors talking animation
 <<player_response_2a YarnCommands>> //plays the player response
+<<wait  4>>
     <<jump DoctorQ3>> //jumps to the next scene
 ===
 title: DoctorQ3
@@ -381,6 +410,7 @@ tags:
 *inaudible*symptoms- *inaudible* #line:Doctor3 //Doctor asks the player about how often the symptom occurs
 <<stop_talking_doctor_animation YarnCommands>> //stops the doctors talking animation    
 <<play_inner_monologue2A YarnCommands>> //plays the inner monologue for the player
+<<wait  5>>
 <<player_response_3a YarnCommands>> //plays the player response
     <<jump DoctorQ4>> //jumps to the next scene
 
@@ -394,6 +424,7 @@ tags:
 <<stop_talking_doctor_animation YarnCommands>> //stops the doctors talking animation
 <<play_inner_monologue4A YarnCommands>> //plays the inner monologue for the player
 <<player_response_4a YarnCommands>> //plays the player response
+<<wait  4>>
     <<jump DoctorQ5>> //jumps to the next scene
 ===
 
@@ -404,7 +435,9 @@ tags:
 *inaudible*fev- recent*inaudible* #line:Doctor5 //Doctor asks the player if they have had any fever or chills
 <<stop_talking_doctor_animation YarnCommands>> //stops the doctors talking animation
 <<play_inner_monologue5A YarnCommands>> //plays the inner monologue for the player
+<<wait  3>>
 <<player_response_5a YarnCommands>> //plays the player response
+<<wait  5>>
     <<jump DoctorQ6>> //jumps to the next scene
 
 ===
@@ -416,7 +449,9 @@ tags:
 *inaudible*ake- *inaudible* #line:Doctor6 //Doctor asks the player if they have been feeling more tired than usual
 <<stop_talking_doctor_animation YarnCommands>> //stops the doctors talking animation
 <<play_inner_monologue6A YarnCommands>> //plays the inner monologue for the player
+<<wait  5>>
 <<player_response_6a YarnCommands>> //plays the player response
+<<wait  4>>
     <<jump DoctorQ7>> //jumps to the next scene
 ===
 
@@ -427,7 +462,9 @@ tags:
 *inaudible*numbness- *inaudible* #line:Doctor7 //Doctor asks the player if they have been experiencing any numbness
 <<stop_talking_doctor_animation YarnCommands>> //stops the doctors talking animation
 <<play_inner_monologue7A YarnCommands>> //plays the inner monologue for the player
+<<wait  7>>
 <<player_response_7a YarnCommands>> //plays the player response
+<<wait  3>>
     <<jump DoctorQ8>> //jumps to the next scene
 ===
 
@@ -438,7 +475,9 @@ tags:
 *inaudible* #line:Doctor8 // Doctor asks the player if they have been drinking more water than usual
 <<stop_talking_doctor_animation YarnCommands>> //stops the doctors talking animation
 <<play_inner_monologue8A YarnCommands>> //plays the inner monologue for the player
+<<wait  6>>
 <<player_response_8a YarnCommands>> //plays the player response
+<<wait  4>>
     <<jump DoctorL1>> //jumps to the next scene
 ===
 
@@ -449,8 +488,10 @@ tags:
 I can write-..down #line:Doctor9 //Doctor tells the player they will write down the symptoms
 <<stop_talking_doctor_animation YarnCommands>> //stops the doctors talking animation
 <<player_response_9a YarnCommands>> //plays the player response
+<<wait  5>>
 <<spawn_note YarnCommands>> //spawns the note for the player to read
 <<play_inner_monologue9A YarnCommands>> //plays the inner monologue for the player
+<<wait  5>>
     <<jump DoctorL2>> //jumps to the next scene
 ===
 
@@ -461,8 +502,11 @@ tags:
 Good- *inaudible* tests-...monitor *inaudible* #line:Doctor10 //Doctor tells the player they will run some tests
 <<stop_talking_doctor_animation YarnCommands>> //stops the doctors talking animation
 <<play_inner_monologue10A YarnCommands>> //plays the inner monologue for the player
+<<wait  6>>
 <<play_inner_monologue11A YarnCommands>> //plays the inner monologue for the player
+<<wait 6>>
 <<player_response_9a YarnCommands>> //plays the player response
+<<wait  3>>
     <<jump DoctorL3>> //jumps to the next scene
 ===
 
@@ -473,6 +517,7 @@ tags:
 *inaudible* #line:Doctor11 //Doctor tells the player they will run some tests
 <<stop_talking_doctor_animation YarnCommands>> //stops the doctors talking animation
 <<play_inner_monologue9A YarnCommands>> //plays the inner monologue for the player
+<<wait  5>>
 <<activate_simulationB YarnCommands>> //activates the second simulation
     <<jump SimulationSignLanguageTranslatorWaiting>> //jumps to the next scene
 ===

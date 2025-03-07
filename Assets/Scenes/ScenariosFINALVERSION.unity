@@ -3314,7 +3314,7 @@ GameObject:
   - component: {fileID: 90650430}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Canvas
+  m_TagString: Dialogue Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10852,6 +10852,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 237548215}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &238146094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 238146095}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &238146095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238146094}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.097, y: 1.94172, z: -10.521}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &238213965
 GameObject:
   m_ObjectHideFlags: 0
@@ -46048,10 +46079,10 @@ MonoBehaviour:
   _variableStorage: {fileID: 0}
   dialogueViews:
   - {fileID: 441956776}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  startNode: VariableDeclarations
+  - {fileID: 1881408320}
+  - {fileID: 837096664}
+  - {fileID: 1891347841}
+  startNode: ScenarioAWaitingRoom
   startAutomatically: 1
   runSelectedOptionAsLine: 1
   lineProvider: {fileID: 0}
@@ -73467,7 +73498,7 @@ MonoBehaviour:
     type: 3}
   dialogueRunner: {fileID: 853571770}
   dialogueCanvas: {fileID: 90650428}
-  PostionSpeachBubble: {x: 0, y: 2, z: 0}
+  PostionSpeachBubble: {x: 0, y: 0, z: 0}
 --- !u!1001 &1386204898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -117045,7 +117076,7 @@ MonoBehaviour:
   idleDoctorAni: {fileID: 1174722449}
   talkingInterpreterAni: {fileID: 635687288}
   walkingNurseAni: {fileID: 2097951748}
-  talkingNurseAni: {fileID: 0}
+  talkingNurseAni: {fileID: 2097951748}
   briefingRoomTarget: {fileID: 2018903539}
   officeRoomTarget: {fileID: 1130294541}
   waitingRoomTarget: {fileID: 700241956}
@@ -117054,6 +117085,7 @@ MonoBehaviour:
   patientHistory: {fileID: 1167510663}
   note: {fileID: 1251090460435706399}
   cameraFader: {fileID: 1307090078}
+  instructor: {fileID: 238146094}
   innerMonologue1AWaitingRoom: {fileID: 200791594}
   innerMonologue2AWaitingRoom: {fileID: 1030555300}
   innerMonologue3AWaitingRoom: {fileID: 204525366}
@@ -119278,3 +119310,4 @@ SceneRoots:
   - {fileID: 1251090460435706398}
   - {fileID: 1885359793}
   - {fileID: 1843352446}
+  - {fileID: 238146095}
